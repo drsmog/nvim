@@ -11,7 +11,6 @@ call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'	
->>>>>>> b1e67c9dfb4cd11feef136c56e1177ee2b8d0e5d
 	Plug 'morhetz/gruvbox',
 	Plug 'tpope/vim-fugitive',
 	Plug 'tpope/vim-commentary'
