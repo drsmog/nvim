@@ -3,6 +3,7 @@
   "suggest.noselect": false,
 
   "coc.preferences.formatOnSaveFiletypes": [
+    "scss",
     "css",
     "markdown",
     "javascript",
