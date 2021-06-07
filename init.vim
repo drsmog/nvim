@@ -6,8 +6,6 @@ call plug#begin()
 	Plug 'sheerun/vim-polyglot'
 	Plug 'preservim/nerdtree'
 	Plug 'nanotech/jellybeans.vim', { 'as': 'jellybeans' }
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'	
@@ -17,9 +15,13 @@ call plug#begin()
 	Plug 'nvim-lua/popup.nvim'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
+	Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 colorscheme gruvbox
+
+
+" lua require('testing')
 
 
 
