@@ -73,7 +73,8 @@ nmap <leader>gj :diffget //2<CR>
 nmap <leader>gs :G<CR>
 
 nnoremap <leader>p <cmd>Telescope find_files<cr>
-nnoremap <leader>f <cmd>Telescope live_grep<cr>
+" nnoremap <leader>f <cmd>Telescope grep_string<cr>
+nnoremap <leader>f :lua require('telescope.builtin').grep_string({search='',only_sort_text = true})<cr>
 nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fq <cmd>Telescope quickfix<cr>
