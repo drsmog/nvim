@@ -60,5 +60,5 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 
 
-
+let g:tagalong_filetypes = ['javascript', 'html', 'xml', 'jsx', 'eruby', 'ejs', 'eco', 'php', 'htmldjango', 'javascriptreact', 'typescriptreact']
 
