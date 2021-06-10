@@ -12,11 +12,11 @@ call plug#begin()
 	Plug 'tpope/vim-commentary'
 	Plug 'nvim-lua/popup.nvim'
 	Plug 'nvim-lua/plenary.nvim'
-	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'AndrewRadev/tagalong.vim'
   Plug 'tpope/vim-surround'
-	Plug 'nvim-telescope/telescope-fzy-native.nvim'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 colorscheme gruvbox
@@ -24,22 +24,22 @@ colorscheme gruvbox
 
 " lua require('testing')
 
-lua << EOF
-require('telescope').setup{
-  defaults = {
-    file_sorter =  require'telescope.sorters'.get_fzy_sorter,
-    generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
-  },
-	extensions = {
-		fzy_native = {
-				override_generic_sorter = false,
-				override_file_sorter = true,
-		}
-	}
-}
-require('telescope').load_extension('fzy_native')
+" lua << EOF
+" require('telescope').setup{
+"   defaults = {
+"     file_sorter =  require'telescope.sorters'.get_fzy_sorter,
+"     generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
+"   },
+" 	extensions = {
+" 		fzy_native = {
+" 				override_generic_sorter = false,
+" 				override_file_sorter = true,
+" 		}
+" 	}
+" }
+" require('telescope').load_extension('fzy_native')
 
-EOF
+" EOF
 
 
 

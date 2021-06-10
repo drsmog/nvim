@@ -46,7 +46,7 @@ nnoremap <Leader>O O<Esc>^Da
 
 " -----
 "
-" xnoremap p pgvy
+xnoremap p pgvy
 nnoremap <SPACE> <Nop>
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
@@ -58,11 +58,11 @@ cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>w :NERDTreeFind<CR>
-" nnoremap <Leader>p :GFiles<CR>
-" nnoremap <Leader>b :Buffers<CR>
-" nnoremap <Leader>h :History<CR>
-" nnoremap <silent> <Leader>f :Rg<CR>
-" nnoremap <silent> <Leader>g :Commits<CR>
+nnoremap <Leader>p :GFiles?<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>h :History<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
+nnoremap <silent> <Leader>g :Commits<CR>
 nnoremap <Leader>cd :t.<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
@@ -72,13 +72,6 @@ nmap <leader>gf :diffget //3<CR>
 nmap <leader>gj :diffget //2<CR>
 nmap <leader>gs :G<CR>
 
-nnoremap <leader>p <cmd>Telescope find_files<cr>
-" nnoremap <leader>f <cmd>Telescope grep_string<cr>
-nnoremap <leader>f :lua require('telescope.builtin').grep_string({search='',only_sort_text = true})<cr>
-nnoremap <leader>b <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>fq <cmd>Telescope quickfix<cr>
-nnoremap <leader>fm <cmd>Telescope marks<cr>
 
 
 function! ToggleQuickFix()
