@@ -58,7 +58,7 @@ cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
 nnoremap <Leader>t :NERDTreeToggle<CR>
 nnoremap <Leader>w :NERDTreeFind<CR>
-nnoremap <Leader>p :GFiles?<CR>
+nnoremap <Leader>p :GFiles<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>h :History<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
