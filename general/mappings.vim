@@ -18,8 +18,10 @@ nnoremap <M-l>    :vertical resize +2<CR>
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
+nnoremap <C-i> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
+nnoremap <C-o> :bprevious<CR>
 
 " Alternate way to save
 " nnoremap <C-s> :w<CR>
