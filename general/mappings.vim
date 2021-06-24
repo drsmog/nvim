@@ -84,4 +84,4 @@ endfunction
 
 nnoremap <silent> <leader>qq :call ToggleQuickFix()<cr>
 
-nnoremap ±;2C <C-i>
+" nnoremap ±;2C <C-i>
