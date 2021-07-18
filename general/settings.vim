@@ -45,7 +45,7 @@ cmap w!! w !sudo tee %
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 set ma " enable create files for nerdtree
 set foldmethod=indent
-set nofoldenable
+set foldlevelstart=20
 set ignorecase
 set smartcase
 
@@ -63,3 +63,27 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:tagalong_filetypes = ['javascript', 'html', 'xml', 'jsx', 'eruby', 'ejs', 'eco', 'php', 'htmldjango', 'javascriptreact', 'typescriptreact']
 
 let g:fzf_buffers_jump = 1
+
+
+augroup quickfix
+    autocmd!
+    autocmd QuickFixCmdPost [^l]* cwindow
+    autocmd QuickFixCmdPost l* lwindow
+augroup END
+
+
+
+
+" CTRL-A CTRL-Q to select all and build quickfix list
+
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
+
+let g:fzf_action = {
+  \ 'ctrl-q': function('s:build_quickfix_list'),
+  \ 'ctrl-v': 'vsplit' }
+
+let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'

@@ -9,8 +9,10 @@ nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
 " Easy CAPS
-inoremap <c-u> <ESC>viwUi
-nnoremap <c-u> viwU<Esc>
+" inoremap <c-u> <ESC>viwUi
+" nnoremap <c-u> viwU<Esc>
+nnoremap <C-S> :wa<cr>
+
 
 
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -67,5 +69,5 @@ function! ToggleQuickFix()
     endif
 endfunction
 
-nnoremap <silent> <leader>qq :call ToggleQuickFix()<cr>
+nnoremap <silent> <leader>q :call ToggleQuickFix()<cr>
 
