@@ -44,7 +44,7 @@ cmap w!! w !sudo tee %
 
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 set ma " enable create files for nerdtree
-set foldmethod=indent
+set foldmethod=syntax
 set foldlevelstart=20
 set ignorecase
 set smartcase
