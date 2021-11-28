@@ -1,18 +1,13 @@
 " set leader key
 let mapleader = " "
 
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-tsserver', 'coc-prettier', 'coc-html-css-support', 'coc-htmlhint', 'coc-html', 'coc-gist', 'coc-eslint', 'coc-css', 'coc-browser']
 
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
-" set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
-" set pumheight=10                        " Makes popup menu smaller
-" set fileencoding=utf-8                  " The encoding written to file
 set ruler              			            " Show the cursor position all the time
 set cmdheight=2                         " More space for displaying messages
 set iskeyword+=-                      	" treat dash separated words as a word text object"
-" set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
@@ -36,15 +31,11 @@ set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
-" set autochdir                           " Your working directory will always be the same as your working directory
 
-
-" You can't stop me
-cmap w!! w !sudo tee %
 
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 set ma " enable create files for nerdtree
-set foldmethod=syntax
+set foldmethod=indent
 set foldlevelstart=20
 set ignorecase
 set smartcase
@@ -53,14 +44,12 @@ let NERDTreeShowHidden=1
 
 
 
-" set clipboard=unnamed
 
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 
 
-let g:tagalong_filetypes = ['javascript', 'html', 'xml', 'jsx', 'eruby', 'ejs', 'eco', 'php', 'htmldjango', 'javascriptreact', 'typescriptreact']
 
 let g:fzf_buffers_jump = 1
 
