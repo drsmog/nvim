@@ -1,4 +1,4 @@
-syntax on
+" syntax on
 
 call plug#begin()
 	Plug 'sheerun/vim-polyglot'
@@ -16,14 +16,12 @@ call plug#begin()
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'neovim/nvim-lspconfig'
-
-
-	Plug 'neovim/nvim-lspconfig'
 	Plug 'hrsh7th/cmp-nvim-lsp'
 	Plug 'hrsh7th/cmp-buffer'
 	Plug 'hrsh7th/cmp-path'
 	Plug 'hrsh7th/cmp-cmdline'
 	Plug 'hrsh7th/nvim-cmp'
+	Plug 'sbdchd/neoformat'
 
 	" For vsnip users.
 	Plug 'hrsh7th/cmp-vsnip'

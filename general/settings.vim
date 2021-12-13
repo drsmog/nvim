@@ -40,6 +40,16 @@ set foldlevelstart=20
 set ignorecase
 set smartcase
 
+set path+=**
+" Ignore files
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=**/coverage/*
+set wildignore+=**/node_modules/*
+set wildignore+=**/android/*
+set wildignore+=**/ios/*
+set wildignore+=**/.git/*
+
 let NERDTreeShowHidden=1
 
 
@@ -76,3 +86,6 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
 let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+
+
+
